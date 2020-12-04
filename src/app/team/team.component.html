@@ -1,0 +1,12 @@
+<div class="card mt-4">
+    <h4 class="card-header">Team</h4>
+    <div class="card-body">
+        <p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
+        <p class="mb-1">Teams:</p>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="teamFromApi">
+            <li>{{teamFromApi.teamName}}</li>
+            <li>{{teamFromApi.coachname}}</li>
+        </ul>
+    </div>
+</div>

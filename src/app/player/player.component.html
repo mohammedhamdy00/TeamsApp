@@ -1,0 +1,12 @@
+<div class="card mt-4">
+    <h4 class="card-header">Player</h4>
+    <div class="card-body">
+        <p>Your role is: <strong>{{currentUser.role}}</strong>.</p>
+        <p class="mb-1">Players:</p>
+        <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+        <ul *ngIf="playerFromApi">
+            <li>{{playerFromApi.playerName}}</li>
+            <li>{{playerFromApi.nationality}}</li>
+        </ul>
+    </div>
+</div>
